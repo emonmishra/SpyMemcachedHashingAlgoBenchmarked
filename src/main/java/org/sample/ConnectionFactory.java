@@ -18,7 +18,7 @@ public class ConnectionFactory {
     static {
 
         List<InetSocketAddress> memcachedAddresses = AddrUtil.getAddresses("localhost:11211, localhost:11212, localhost:11213");
-        ConnectionFactoryBuilder consistentBuilder = new ConnectionFactoryBuilder().setOpTimeout(1000L).setLocatorType(ConnectionFactoryBuilder.Locator.CONSISTENT).setFailureMode(FailureMode.Redistribute).setMaxReconnectDelay(1);
+        ConnectionFactoryBuilder consistentBuilder = new ConnectionFactoryBuilder().setHashAlg(DefaultHashAlgorithm.KETAMA_HASH).setOpTimeout(1000L).setLocatorType(ConnectionFactoryBuilder.Locator.CONSISTENT).setFailureMode(FailureMode.Redistribute).setMaxReconnectDelay(1);
         ConnectionFactoryBuilder nativeBuilder = new ConnectionFactoryBuilder().setOpTimeout(1000L).setLocatorType(ConnectionFactoryBuilder.Locator.ARRAY_MOD).setFailureMode(FailureMode.Redistribute).setMaxReconnectDelay(1);
         try {
             nativeClient = new MemcachedClient(nativeBuilder.build(), memcachedAddresses);
