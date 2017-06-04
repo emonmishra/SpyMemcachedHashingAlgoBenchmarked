@@ -43,7 +43,7 @@ public class MyBenchmarkV2 {
         public String[] keys = new String[1000];
         private List<InetSocketAddress> memcachedAddresses = AddrUtil.getAddresses("localhost:11211");
         private ConnectionFactoryBuilder consistentBuilder = new ConnectionFactoryBuilder().setHashAlg(DefaultHashAlgorithm.KETAMA_HASH).setOpTimeout(1000L).setLocatorType(ConnectionFactoryBuilder.Locator.CONSISTENT).setFailureMode(FailureMode.Redistribute).setMaxReconnectDelay(1);
-        private ConnectionFactoryBuilder nativeBuilder = new ConnectionFactoryBuilder().setHashAlg(DefaultHashAlgorithm.KETAMA_HASH).setOpTimeout(1000L).setLocatorType(ConnectionFactoryBuilder.Locator.ARRAY_MOD).setFailureMode(FailureMode.Redistribute).setMaxReconnectDelay(1);
+        private ConnectionFactoryBuilder nativeBuilder = new ConnectionFactoryBuilder().setOpTimeout(1000L).setLocatorType(ConnectionFactoryBuilder.Locator.ARRAY_MOD).setFailureMode(FailureMode.Redistribute).setMaxReconnectDelay(1);
 
         public MyState() {
 
