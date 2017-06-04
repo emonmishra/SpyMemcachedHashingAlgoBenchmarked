@@ -1,0 +1,2 @@
+JMH S 22 org.sample.MyBenchmark S 69 org.sample.generated.MyBenchmark_testInsertionByNativeHashing_jmhTest S 28 testInsertionByNativeHashing S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E U 7 SECONDS E E 
+JMH S 22 org.sample.MyBenchmark S 73 org.sample.generated.MyBenchmark_testInsertionByConsistentHashing_jmhTest S 32 testInsertionByConsistentHashing S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E U 7 SECONDS E E 
